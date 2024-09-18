@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		042EF8482C9AEBA700A0C56B /* MementoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8472C9AEBA700A0C56B /* MementoApp.swift */; };
-		042EF84A2C9AEBA700A0C56B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8492C9AEBA700A0C56B /* ContentView.swift */; };
+		042EF84A2C9AEBA700A0C56B /* ContentVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8492C9AEBA700A0C56B /* ContentVIew.swift */; };
 		042EF84C2C9AEBA800A0C56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EF84B2C9AEBA800A0C56B /* Assets.xcassets */; };
 		042EF84F2C9AEBA800A0C56B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EF84E2C9AEBA800A0C56B /* Preview Assets.xcassets */; };
-		042EF8562C9AF33B00A0C56B /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8552C9AF33B00A0C56B /* SecondView.swift */; };
+		042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */; };
 		042EF8602C9B024700A0C56B /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 042EF85F2C9B024700A0C56B /* AlertToast */; };
+		046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */; };
+		046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BC2C9B800E003CA2AC /* NewsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		042EF8442C9AEBA700A0C56B /* Memento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042EF8472C9AEBA700A0C56B /* MementoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoApp.swift; sourceTree = "<group>"; };
-		042EF8492C9AEBA700A0C56B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		042EF8492C9AEBA700A0C56B /* ContentVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVIew.swift; sourceTree = "<group>"; };
 		042EF84B2C9AEBA800A0C56B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042EF84E2C9AEBA800A0C56B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		042EF8552C9AF33B00A0C56B /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksView.swift; sourceTree = "<group>"; };
+		046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksView.swift; sourceTree = "<group>"; };
+		046B82BC2C9B800E003CA2AC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				042EF8472C9AEBA700A0C56B /* MementoApp.swift */,
-				042EF8492C9AEBA700A0C56B /* ContentView.swift */,
-				042EF8552C9AF33B00A0C56B /* SecondView.swift */,
+				042EF8492C9AEBA700A0C56B /* ContentVIew.swift */,
+				042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */,
+				046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */,
+				046B82BC2C9B800E003CA2AC /* NewsView.swift */,
 				042EF84B2C9AEBA800A0C56B /* Assets.xcassets */,
 				042EF84D2C9AEBA800A0C56B /* Preview Content */,
 			);
@@ -148,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042EF8562C9AF33B00A0C56B /* SecondView.swift in Sources */,
-				042EF84A2C9AEBA700A0C56B /* ContentView.swift in Sources */,
+				042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */,
+				046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */,
+				042EF84A2C9AEBA700A0C56B /* ContentVIew.swift in Sources */,
+				046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */,
 				042EF8482C9AEBA700A0C56B /* MementoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
