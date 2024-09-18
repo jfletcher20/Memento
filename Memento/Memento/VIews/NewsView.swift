@@ -2,7 +2,7 @@
 //  NewsView.swift
 //  Memento
 //
-//  Created by Joshua Fletcher
+//  Created by Joshua Lee Fletcher
 //
 
 import SwiftUI
