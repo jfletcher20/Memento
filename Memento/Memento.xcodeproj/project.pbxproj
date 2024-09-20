@@ -19,6 +19,8 @@
 		046B82C32C9B844C003CA2AC /* TaskCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C22C9B844C003CA2AC /* TaskCategoryModel.swift */; };
 		046B82C52C9B857E003CA2AC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C42C9B857E003CA2AC /* MockData.swift */; };
 		046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */; };
+		046B82CA2C9CE638003CA2AC /* NewTaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */; };
+		046B82CE2C9CE7DD003CA2AC /* NewTaskDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82CD2C9CE7DD003CA2AC /* NewTaskDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		046B82C22C9B844C003CA2AC /* TaskCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryModel.swift; sourceTree = "<group>"; };
 		046B82C42C9B857E003CA2AC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardWidget.swift; sourceTree = "<group>"; };
+		046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskWidget.swift; sourceTree = "<group>"; };
+		046B82CD2C9CE7DD003CA2AC /* NewTaskDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				042EF8472C9AEBA700A0C56B /* MementoApp.swift */,
-				042EF8492C9AEBA700A0C56B /* ContentVIew.swift */,
-				046B82BE2C9B82BD003CA2AC /* VIews */,
-				046B82C62C9B8989003CA2AC /* Widgets */,
+				046B82CC2C9CE799003CA2AC /* Presentation */,
 				046B82BF2C9B82D7003CA2AC /* Data */,
 				042EF84B2C9AEBA800A0C56B /* Assets.xcassets */,
 				042EF84D2C9AEBA800A0C56B /* Preview Content */,
@@ -110,8 +112,28 @@
 			isa = PBXGroup;
 			children = (
 				046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */,
+				046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		046B82CB2C9CE787003CA2AC /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				046B82CD2C9CE7DD003CA2AC /* NewTaskDialog.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		046B82CC2C9CE799003CA2AC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				042EF8492C9AEBA700A0C56B /* ContentVIew.swift */,
+				046B82BE2C9B82BD003CA2AC /* VIews */,
+				046B82C62C9B8989003CA2AC /* Widgets */,
+				046B82CB2C9CE787003CA2AC /* Dialogs */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,11 +215,13 @@
 				046B82C12C9B82F2003CA2AC /* TaskModel.swift in Sources */,
 				042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */,
 				046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */,
+				046B82CA2C9CE638003CA2AC /* NewTaskWidget.swift in Sources */,
 				042EF84A2C9AEBA700A0C56B /* ContentVIew.swift in Sources */,
 				046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */,
 				046B82C52C9B857E003CA2AC /* MockData.swift in Sources */,
 				046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */,
 				042EF8482C9AEBA700A0C56B /* MementoApp.swift in Sources */,
+				046B82CE2C9CE7DD003CA2AC /* NewTaskDialog.swift in Sources */,
 				046B82C32C9B844C003CA2AC /* TaskCategoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
