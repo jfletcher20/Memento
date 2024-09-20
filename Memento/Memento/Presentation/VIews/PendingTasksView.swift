@@ -8,7 +8,16 @@
 import SwiftUI
 
 struct PendingTasksView: View {
-    @State private var tasks = Mock.getTasks();
+    
+    @Environment(\.managedObjectContext) var context;
+    
+    @FetchRequest(
+        entity: TaskDataModel.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \TaskDataModel.dueDate, ascending: true)]
+    ) var tasks: FetchedResults<TaskDataModel>
+    
+    @State private var showOptionsDialog: Bool = false;
+    
     var body: some View {
         ZStack {
             VStack {
@@ -17,7 +26,18 @@ struct PendingTasksView: View {
                 } else {
                     List(tasks.filter { !$0.completed }) { task in
                         TaskCardWidget(task: task).onTapGesture {
-                            // showingDialog = task;
+                            showOptionsDialog = true;
+                        }.confirmationDialog(task.name ?? "Unknown task", isPresented: $showOptionsDialog) {
+                            Button("Mark as complete", action: {
+                                task.completed = true;
+                                try? context.save();
+                                showOptionsDialog = false;
+                            })
+                            Button("Delete task", action: {
+                                context.delete(task);
+                                try? context.save();
+                                showOptionsDialog = false;
+                            })
                         }
                     }
                 }
@@ -25,8 +45,8 @@ struct PendingTasksView: View {
             NewTaskWidget(onNewTask: onNewTask)
         }
     }
-    func onNewTask(task: Task) {
-        tasks.append(task);
+    func onNewTask(task: TaskDataModel) {
+        CoreDataStack.shared.commit();
     }
 }
 

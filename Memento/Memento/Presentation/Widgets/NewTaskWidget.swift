@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewTaskWidget: View {
     
-    var onNewTask: ((_ task: Task) -> ())?;
+    var onNewTask: ((_ task: TaskDataModel) -> ())?;
     @State var showCreateTaskDialog: Bool = false;
     
     var body: some View {
@@ -29,8 +29,11 @@ struct NewTaskWidget: View {
                         .shadow(radius: 5)
                 }.padding(8)
             }
-        }.sheet(isPresented: $showCreateTaskDialog) {
+        }
+        .sheet(isPresented: $showCreateTaskDialog) {
             NewTaskDialog(onNewTask: onNewTask)
+                .cornerRadius(20)
+                .frame(width: .infinity)
         }
         
         // To create a custom dialog, place a ZStack around the VStack and may this if statement
@@ -40,12 +43,12 @@ struct NewTaskWidget: View {
 //                Color.black.opacity(0.3).ignoresSafeArea().onTapGesture {
 //                    showCreateTaskDialog = false;
 //                }
-//                    .frame(width: 300, height: 350)
+//                NewTaskDialog(onNewTask: onNewTask)
+//                    .frame(width: 300, height: 300)
 //                    .cornerRadius(20)
 //                    .shadow(radius: 10)
 //                    .transition(.move(edge: .bottom))
 //                    .animation(.easeInOut)
-//                    .navigationBarTitle("New task")
 //
 //            }
         

@@ -13,11 +13,10 @@
 		042EF84F2C9AEBA800A0C56B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EF84E2C9AEBA800A0C56B /* Preview Assets.xcassets */; };
 		042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */; };
 		042EF8602C9B024700A0C56B /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 042EF85F2C9B024700A0C56B /* AlertToast */; };
+		04582BBB2C9D989A00223EB6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */; };
+		04582BBF2C9D9BE400223EB6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */; };
 		046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */; };
 		046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BC2C9B800E003CA2AC /* NewsView.swift */; };
-		046B82C12C9B82F2003CA2AC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C02C9B82F2003CA2AC /* TaskModel.swift */; };
-		046B82C32C9B844C003CA2AC /* TaskCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C22C9B844C003CA2AC /* TaskCategoryModel.swift */; };
-		046B82C52C9B857E003CA2AC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C42C9B857E003CA2AC /* MockData.swift */; };
 		046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */; };
 		046B82CA2C9CE638003CA2AC /* NewTaskWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */; };
 		046B82CE2C9CE7DD003CA2AC /* NewTaskDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82CD2C9CE7DD003CA2AC /* NewTaskDialog.swift */; };
@@ -30,11 +29,10 @@
 		042EF84B2C9AEBA800A0C56B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042EF84E2C9AEBA800A0C56B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksView.swift; sourceTree = "<group>"; };
+		04582BBA2C9D989A00223EB6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksView.swift; sourceTree = "<group>"; };
 		046B82BC2C9B800E003CA2AC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		046B82C02C9B82F2003CA2AC /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		046B82C22C9B844C003CA2AC /* TaskCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryModel.swift; sourceTree = "<group>"; };
-		046B82C42C9B857E003CA2AC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardWidget.swift; sourceTree = "<group>"; };
 		046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskWidget.swift; sourceTree = "<group>"; };
 		046B82CD2C9CE7DD003CA2AC /* NewTaskDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskDialog.swift; sourceTree = "<group>"; };
@@ -101,9 +99,7 @@
 		046B82BF2C9B82D7003CA2AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				046B82C02C9B82F2003CA2AC /* TaskModel.swift */,
-				046B82C22C9B844C003CA2AC /* TaskCategoryModel.swift */,
-				046B82C42C9B857E003CA2AC /* MockData.swift */,
+				04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -129,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				042EF8492C9AEBA700A0C56B /* ContentVIew.swift */,
+				04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */,
 				046B82BE2C9B82BD003CA2AC /* VIews */,
 				046B82C62C9B8989003CA2AC /* Widgets */,
 				046B82CB2C9CE787003CA2AC /* Dialogs */,
@@ -212,17 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046B82C12C9B82F2003CA2AC /* TaskModel.swift in Sources */,
+				04582BBF2C9D9BE400223EB6 /* CoreDataStack.swift in Sources */,
 				042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */,
 				046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */,
 				046B82CA2C9CE638003CA2AC /* NewTaskWidget.swift in Sources */,
 				042EF84A2C9AEBA700A0C56B /* ContentVIew.swift in Sources */,
 				046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */,
-				046B82C52C9B857E003CA2AC /* MockData.swift in Sources */,
 				046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */,
 				042EF8482C9AEBA700A0C56B /* MementoApp.swift in Sources */,
+				04582BBB2C9D989A00223EB6 /* DataModel.xcdatamodeld in Sources */,
 				046B82CE2C9CE7DD003CA2AC /* NewTaskDialog.swift in Sources */,
-				046B82C32C9B844C003CA2AC /* TaskCategoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +438,19 @@
 			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04582BBA2C9D989A00223EB6 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 04582BBA2C9D989A00223EB6 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 042EF83C2C9AEBA700A0C56B /* Project object */;
 }

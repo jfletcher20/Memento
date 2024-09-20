@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct TaskCardWidget: View {
-    @State var task: Task;
+    
+    @State var task: TaskDataModel?;
+    
     var body: some View {
         HStack {
             colorStrip();
             VStack(alignment: .leading) {
-                Text(task.name)
+                Text(task?.name ?? "Default")
                     .font(.body)
-                Text(formatDate(task.dueDate))
+                Text(formatDate(task?.dueDate ?? Date()))
                     .font(.footnote)
-                    .foregroundColor(!task.completed && isOverdue(task.dueDate) ? .red : .secondary)
+                    .foregroundColor(!(task?.completed ?? false) && isOverdue(task?.dueDate ?? Date()) ? .red : .secondary)
             }.frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
         }.frame(maxWidth: .infinity)
@@ -26,7 +28,7 @@ struct TaskCardWidget: View {
     
     func colorStrip(width: Double = 8) -> some View {
         return RoundedRectangle(cornerRadius: 8)
-            .fill(task.category.color)
+            .fill(task?.category?.color?.toColor() ?? .purple)
             .frame(width: width);
     }
     
@@ -36,13 +38,14 @@ struct TaskCardWidget: View {
     
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter();
-        formatter.dateStyle = .medium;
+        formatter.locale = Locale(identifier: "hr_HR")
+        formatter.dateFormat = "HH:mm dd.MM.yyyy";
         return formatter.string(from: date);
     }
 }
 
 struct TaskCardWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TaskCardWidget(task: Mock.getTasks().first!)
+        TaskCardWidget(task: nil)
     }
 }

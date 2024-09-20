@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MementoApp: App {
+    @StateObject private var coreDataStack: CoreDataStack = CoreDataStack.shared;
+    init() {
+        CoreDataStack.initialize();
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, coreDataStack.persistent.viewContext)
         }
     }
 }
