@@ -1,5 +1,5 @@
 //
-//  CoreData.swift
+//  CoreDataStack.swift
 //  Memento
 //
 //  Created by Joshua Lee Fletcher
@@ -23,6 +23,11 @@ class CoreDataStack: ObservableObject {
     }()
     
     private init() { }
+    
+    // if the application has no task categories on startup, establish 3 basic categories for courses:
+    // RAMPU - Development of applications for Mobile and Smart Devices - Razvoj aplikacija za mobilne i pametne Uređaje
+    // RPP - Development of Software Products - Razvoj programskih proizvoda
+    // RWA - Development of Web Applications - Razvoj web aplikacija
     static func initialize() {
         let context = shared.persistent.viewContext;
         let fetch = TaskCategoryDataModel.fetchRequest();

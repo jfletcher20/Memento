@@ -15,6 +15,11 @@
 		042EF8602C9B024700A0C56B /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 042EF85F2C9B024700A0C56B /* AlertToast */; };
 		04582BBB2C9D989A00223EB6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */; };
 		04582BBF2C9D9BE400223EB6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */; };
+		04582BC52C9E48AB00223EB6 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BC42C9E48AB00223EB6 /* ArticleModel.swift */; };
+		04582BC72C9E4A5C00223EB6 /* ArticleCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BC62C9E4A5C00223EB6 /* ArticleCardWidget.swift */; };
+		04582BC92C9E4F2F00223EB6 /* SpinnerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BC82C9E4F2F00223EB6 /* SpinnerWidget.swift */; };
+		04582BCB2C9E540B00223EB6 /* NewsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BCA2C9E540B00223EB6 /* NewsResponseModel.swift */; };
+		04582BCD2C9E57F700223EB6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04582BCC2C9E57F700223EB6 /* WebService.swift */; };
 		046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */; };
 		046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82BC2C9B800E003CA2AC /* NewsView.swift */; };
 		046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */; };
@@ -31,6 +36,11 @@
 		042EF8552C9AF33B00A0C56B /* PendingTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksView.swift; sourceTree = "<group>"; };
 		04582BBA2C9D989A00223EB6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		04582BC42C9E48AB00223EB6 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		04582BC62C9E4A5C00223EB6 /* ArticleCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardWidget.swift; sourceTree = "<group>"; };
+		04582BC82C9E4F2F00223EB6 /* SpinnerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerWidget.swift; sourceTree = "<group>"; };
+		04582BCA2C9E540B00223EB6 /* NewsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseModel.swift; sourceTree = "<group>"; };
+		04582BCC2C9E57F700223EB6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		046B82BA2C9B7FCE003CA2AC /* CompletedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksView.swift; sourceTree = "<group>"; };
 		046B82BC2C9B800E003CA2AC /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardWidget.swift; sourceTree = "<group>"; };
@@ -86,6 +96,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		04582BCE2C9E61E300223EB6 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */,
+				04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		04582BCF2C9E61EB00223EB6 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				04582BCC2C9E57F700223EB6 /* WebService.swift */,
+				04582BC42C9E48AB00223EB6 /* ArticleModel.swift */,
+				04582BCA2C9E540B00223EB6 /* NewsResponseModel.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		046B82BE2C9B82BD003CA2AC /* VIews */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +128,8 @@
 		046B82BF2C9B82D7003CA2AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				04582BBE2C9D9BE400223EB6 /* CoreDataStack.swift */,
+				04582BCE2C9E61E300223EB6 /* Local */,
+				04582BCF2C9E61EB00223EB6 /* Web */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -108,7 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				046B82C72C9B89AD003CA2AC /* TaskCardWidget.swift */,
+				04582BC62C9E4A5C00223EB6 /* ArticleCardWidget.swift */,
 				046B82C92C9CE638003CA2AC /* NewTaskWidget.swift */,
+				04582BC82C9E4F2F00223EB6 /* SpinnerWidget.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -125,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				042EF8492C9AEBA700A0C56B /* ContentVIew.swift */,
-				04582BB92C9D989A00223EB6 /* DataModel.xcdatamodeld */,
 				046B82BE2C9B82BD003CA2AC /* VIews */,
 				046B82C62C9B8989003CA2AC /* Widgets */,
 				046B82CB2C9CE787003CA2AC /* Dialogs */,
@@ -209,15 +240,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04582BC72C9E4A5C00223EB6 /* ArticleCardWidget.swift in Sources */,
 				04582BBF2C9D9BE400223EB6 /* CoreDataStack.swift in Sources */,
 				042EF8562C9AF33B00A0C56B /* PendingTasksView.swift in Sources */,
+				04582BCD2C9E57F700223EB6 /* WebService.swift in Sources */,
 				046B82BB2C9B7FCE003CA2AC /* CompletedTasksView.swift in Sources */,
 				046B82CA2C9CE638003CA2AC /* NewTaskWidget.swift in Sources */,
+				04582BCB2C9E540B00223EB6 /* NewsResponseModel.swift in Sources */,
 				042EF84A2C9AEBA700A0C56B /* ContentVIew.swift in Sources */,
 				046B82BD2C9B800E003CA2AC /* NewsView.swift in Sources */,
+				04582BC52C9E48AB00223EB6 /* ArticleModel.swift in Sources */,
 				046B82C82C9B89AD003CA2AC /* TaskCardWidget.swift in Sources */,
 				042EF8482C9AEBA700A0C56B /* MementoApp.swift in Sources */,
 				04582BBB2C9D989A00223EB6 /* DataModel.xcdatamodeld in Sources */,
+				04582BC92C9E4F2F00223EB6 /* SpinnerWidget.swift in Sources */,
 				046B82CE2C9CE7DD003CA2AC /* NewTaskDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
