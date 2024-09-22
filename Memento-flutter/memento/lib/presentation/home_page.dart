@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:memento/presentation/tabs/s_completed_tasks.dart';
-import 'package:memento/presentation/tabs/s_news_screen.dart';
 import 'package:memento/presentation/tabs/s_pending_tasks.dart';
+import 'package:memento/presentation/tabs/s_news_screen.dart';
+
+import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});

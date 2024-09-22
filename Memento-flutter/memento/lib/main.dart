@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:memento/data/d_theme_data.dart';
 import 'package:memento/presentation/home_page.dart';
+import 'package:memento/data/d_theme_data.dart';
+
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
