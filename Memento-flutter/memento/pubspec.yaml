@@ -1,0 +1,21 @@
+name: memento
+description: "Flutter demo todo project for students of RAMPU@FOI, made by Joshua Lee Fletcher of FOI@MTLAB"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fluttertoast: ^8.2.8
+  sqflite: ^2.3.3+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
