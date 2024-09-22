@@ -1,6 +1,6 @@
 import 'package:memento/presentation/widgets/w_task_card.dart';
 import 'package:memento/data/models/m_task.dart';
-import 'package:memento/data/u_mock.dart';
+import 'package:memento/data/u_database.dart';
 
 import 'package:flutter/material.dart';
 
@@ -12,19 +12,19 @@ class CompletedTasksScreen extends StatefulWidget {
 }
 
 class _CompletedTasksScreenState extends State<CompletedTasksScreen> {
-  List<Task> get tasks => Mock.tasks.where((task) => task.completed).toList();
+  List<Task> get tasks => DatabaseManager.tasks.where((task) => task.completed).toList();
 
   void refresh() => setState(() {});
 
   @override
   void initState() {
     super.initState();
-    Mock.instance.addListener(refresh);
+    DatabaseManager.instance.addListener(refresh);
   }
 
   @override
   void dispose() {
-    Mock.instance.removeListener(refresh);
+    DatabaseManager.instance.removeListener(refresh);
     super.dispose();
   }
 
@@ -35,7 +35,7 @@ class _CompletedTasksScreenState extends State<CompletedTasksScreen> {
 
   Widget get noTasks {
     return Center(
-      child: Text("No pending tasks! 🎉", style: Theme.of(context).textTheme.titleLarge),
+      child: Text("No completed tasks.", style: Theme.of(context).textTheme.titleLarge),
     );
   }
 

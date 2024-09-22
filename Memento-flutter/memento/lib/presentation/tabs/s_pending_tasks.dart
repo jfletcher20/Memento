@@ -1,6 +1,6 @@
 import 'package:memento/presentation/widgets/w_task_card.dart';
 import 'package:memento/data/models/m_task.dart';
-import 'package:memento/data/u_mock.dart';
+import 'package:memento/data/u_database.dart';
 
 import 'package:flutter/material.dart';
 
@@ -12,19 +12,19 @@ class PendingTasksScreen extends StatefulWidget {
 }
 
 class _PendingTasksScreenState extends State<PendingTasksScreen> {
-  List<Task> get tasks => Mock.tasks.where((task) => !task.completed).toList();
+  List<Task> get tasks => DatabaseManager.tasks.where((task) => !task.completed).toList();
 
   void refresh() => setState(() {});
 
   @override
   void initState() {
     super.initState();
-    Mock.instance.addListener(refresh);
+    DatabaseManager.instance.addListener(refresh);
   }
 
   @override
   void dispose() {
-    Mock.instance.removeListener(refresh);
+    DatabaseManager.instance.removeListener(refresh);
     super.dispose();
   }
 
@@ -42,9 +42,10 @@ class _PendingTasksScreenState extends State<PendingTasksScreen> {
   Widget get tasksList {
     return ListView.builder(
       itemCount: tasks.length,
-      itemBuilder: (context, index) {
-        return TaskCardWidget(task: tasks[index]);
-      },
+      itemBuilder: (context, index) => TaskCardWidget(
+        task: tasks[index],
+        tappable: true,
+      ),
     );
   }
 }

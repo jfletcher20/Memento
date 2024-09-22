@@ -1,7 +1,7 @@
 import 'package:memento/data/models/m_task_category.dart';
 import 'package:memento/presentation/widgets/w_task_card.dart';
 import 'package:memento/data/models/m_task.dart';
-import 'package:memento/data/u_mock.dart';
+import 'package:memento/data/u_database.dart';
 
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,8 @@ class NewTaskDialog extends StatefulWidget {
 }
 
 class _NewTaskDialogState extends State<NewTaskDialog> {
-  Task task = Task(name: "New task name", dueDate: DateTime.now(), category: Mock.categories.first);
+  Task task = Task(
+      name: "New task name", dueDate: DateTime.now(), category: DatabaseManager.categories.first);
   late TextEditingController taskNameController = TextEditingController(text: task.name);
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
         ),
         TextButton(
           onPressed: () {
-            Mock.addTask(task.copyWith(name: taskNameController.text));
+            DatabaseManager.addTask(task.copyWith(name: taskNameController.text));
             Navigator.of(context).pop();
           },
           child: const Text("Create"),
@@ -62,7 +63,7 @@ class _NewTaskDialogState extends State<NewTaskDialog> {
         hint: const Text("Select category"),
         value: task.category,
         onChanged: (category) => setState(() => task = task.copyWith(category: category)),
-        items: Mock.categories.map((category) {
+        items: DatabaseManager.categories.map((category) {
           return DropdownMenuItem(
             value: category,
             child: Text(category.name, style: TextStyle(color: category.color)),
