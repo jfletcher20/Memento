@@ -1,5 +1,6 @@
 import 'package:memento/presentation/tabs/s_completed_tasks.dart';
 import 'package:memento/presentation/tabs/s_pending_tasks.dart';
+import 'package:memento/presentation/dialogs/di_new_task.dart';
 import 'package:memento/presentation/tabs/s_news_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -14,10 +15,22 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin {
   late final TabController tabController;
 
+  void refresh() => setState(() {});
+
   @override
   void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
+    // adding a listener means we can call setState() when the tab changes
+    // this fixes a bug where swiping between tabs doesn't update the UI
+    tabController.addListener(refresh);
+  }
+
+  @override
+  void dispose() {
+    tabController.removeListener(refresh);
+    tabController.dispose();
+    super.dispose();
   }
 
   @override
@@ -41,11 +54,17 @@ class _HomepageState extends State<Homepage> with SingleTickerProviderStateMixin
         ],
         showSelectedLabels: true,
         showUnselectedLabels: false,
-        // setState will call the build function, which will rebuild the BottomNavigationBar
-        // and display the selected tab change in the bottom navigation bar
-        onTap: (index) => setState(() => tabController.animateTo(index)),
+        onTap: (index) => tabController.animateTo(index),
         currentIndex: tabController.index,
       ),
+      floatingActionButton: tabController.index == 0
+          ? FloatingActionButton(
+              child: const Icon(Icons.add),
+              onPressed: () {
+                showDialog(context: context, builder: (context) => const NewTaskDialog());
+              },
+            )
+          : null,
     );
   }
 }

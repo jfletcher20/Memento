@@ -13,6 +13,21 @@ class PendingTasksScreen extends StatefulWidget {
 
 class _PendingTasksScreenState extends State<PendingTasksScreen> {
   List<Task> get tasks => Mock.tasks.where((task) => !task.completed).toList();
+
+  void refresh() => setState(() {});
+
+  @override
+  void initState() {
+    super.initState();
+    Mock.instance.addListener(refresh);
+  }
+
+  @override
+  void dispose() {
+    Mock.instance.removeListener(refresh);
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return tasks.isEmpty ? noTasks : tasksList;

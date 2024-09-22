@@ -12,7 +12,7 @@ class TaskCardWidget extends StatelessWidget {
     return Card(
       child: ListTile(
         title: Text(task.name),
-        subtitle: Text(formattedDate, style: dateStyle),
+        subtitle: Text(task.dueDate.formattedDate, style: dateStyle),
         leading: CategoryWidget(category: task.category),
       ),
     );
@@ -23,10 +23,9 @@ class TaskCardWidget extends StatelessWidget {
         ? const TextStyle(color: Colors.red)
         : null;
   }
+}
 
-  // format in form: "hh:mm dd.mm.yyyy."
-  String get formattedDate {
-    return "${task.dueDate.hour}:${task.dueDate.minute} "
-        "${task.dueDate.day}.${task.dueDate.month}.${task.dueDate.year}.";
-  }
+// format in form: "hh:mm dd.MM.yyyy."
+extension CroatianDateFormat on DateTime {
+  String get formattedDate => "$hour:$minute $day.$month.$year.";
 }
